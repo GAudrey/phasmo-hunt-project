@@ -6,21 +6,27 @@
                 <label for="optional_objective_1">Optional objective 1</label>
                 <select name="opt_obj_1" id="optional_objective_1">
                     <option>- Select an objective</option>
-                    <option value=""></option>
+                    @foreach($objectives as $objective)
+                    <option value="{{ $objective->id_objective }}">{{ $objective->objective }}</option>
+                    @endforeach
                 </select>
             </div>
             <div>
                 <label for="optional_objective_2">Optional objective 2</label>
                 <select name="opt_obj_2" id="optional_objective_2">
                     <option>- Select an objective</option>
-                    <option value=""></option>
+                    @foreach($objectives as $objective)
+                    <option value="{{ $objective->id_objective }}">{{ $objective->objective }}</option>
+                    @endforeach
                 </select>
             </div>
             <div>
                 <label for="optional_objective_3">Optional objective 3</label>
                 <select name="opt_obj_3" id="optional_objective_3">
                     <option>- Select an objective</option>
-                    <option value=""></option>
+                    @foreach($objectives as $objective)
+                    <option value="{{ $objective->id_objective }}">{{ $objective->objective }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -29,7 +35,9 @@
             <label for="ghost_firstname">What's the ghost first name?</label>
             <select name="firstname" id="ghost_firstname">
                 <option>- Select a first name</option>
-                <option value=""></option>
+                @foreach($firstnames as $firstname)
+                <option value="{{ $firstname->id_firstname }}">{{ $firstname->firstname }}</option>
+                @endforeach
             </select>
         </div>
         <!-- LAST NAMES -->
@@ -37,7 +45,9 @@
             <label for="ghost_lastname">What's the ghost last name?</label>
             <select name="lastname" id="ghost_lastname">
                 <option>- Select a last name</option>
-                <option value=""></option>
+                @foreach($lastnames as $lastname)
+                <option value="{{ $lastname->id_lastname }}">{{ $lastname->lastname }}</option>
+                @endforeach
             </select>
         </div>
         <!-- TALK TO -->

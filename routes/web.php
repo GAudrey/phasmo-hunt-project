@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('form', FormController::class);
+Route::get('/', [FormController::class, 'form']);
