@@ -1,5 +1,6 @@
 <section id="form">
-    <form method="post" action="">
+    <form method="post" action="{{ url('whiteboard') }}">
+        @csrf
         <!-- OBJECTIVES -->
         <div>         
             <div>
