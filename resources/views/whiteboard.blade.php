@@ -4,5 +4,11 @@
     <p>Objective 2: {{ $objective1 }}.</p>
     <p>Objective 3: {{ $objective2 }}.</p>
     <p>Objective 4: {{ $objective3 }}.</p>
-    <p>I've done some investigating for you. Looks like the ghost's name is {{ $firstn }} {{ $lastn }}. This Ghost also seems to {{ $talk }}.You should be albe to use it's name to anger it and get some paranormal activity. Make sure to refer to your Journal and write down any evidence you find.</p>
+    <p>I've done some investigating for you. Looks like the ghost's name is {{ $firstn }} {{ $lastn }}. This Ghost also seems to 
+    @if($talk == 'talk_solo')
+        only respond to people who are alone. 
+    @elseif($talk == 'talk_multi')
+        respond to everyone. 
+    @endif
+    You should be albe to use it's name to anger it and get some paranormal activity. Make sure to refer to your Journal and write down any evidence you find.</p>
 </section>

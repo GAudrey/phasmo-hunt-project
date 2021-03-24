@@ -21,6 +21,4 @@ use Illuminate\Http\Request;
 
 Route::get('/', [FormController::class, 'form']);
 Route::post('/whiteboard', [FormController::class, 'results']);
-Route::get('/whiteboard', function (Request $request){
-
-});
+Route::get('/whiteboard', function (Request $request){});
