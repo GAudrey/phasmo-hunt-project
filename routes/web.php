@@ -19,6 +19,8 @@ use Illuminate\Http\Request;
 //     return view('welcome');
 // });
 
-Route::get('/', [FormController::class, 'form']);
-Route::post('/whiteboard', [FormController::class, 'results']);
-Route::get('/whiteboard', function (Request $request){});
+// ROUTE to view form -> default view
+Route::get('/', [PhasmoController::class, 'form']);
+
+// ROUTE to view hunt -> form results + clues and ghosts
+Route::post('/hunt', [PhasmoController::class, 'hunt']);

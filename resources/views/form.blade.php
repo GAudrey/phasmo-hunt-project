@@ -1,5 +1,5 @@
 <section id="form">
-    <form method="post" action="{{ url('whiteboard') }}">
+    <form method="post" action="{{ url('hunt') }}">
         @csrf
         <!-- OBJECTIVES -->
         <div>         
