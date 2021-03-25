@@ -1,5 +1,9 @@
+<x-layout>
+    <x-slot name="title">
+        Phasmo Hunt
+    </x-slot>
 <section id="form">
-    <form method="post" action="{{ url('whiteboard') }}">
+    <form method="post" action="{{ url('hunt') }}">
         @csrf
         <!-- OBJECTIVES -->
         <div>         
@@ -62,3 +66,4 @@
         <input type="submit" name="submit" value="let the investigation begins">
     </form>
 </section>
+</x-layout>
