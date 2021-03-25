@@ -15,12 +15,9 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 // ROUTE to view form -> default view
 Route::get('/', [PhasmoController::class, 'form']);
+
 
 // ROUTE to view hunt -> form results + clues and ghosts
 Route::post('/hunt', [PhasmoController::class, 'hunt']);

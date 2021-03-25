@@ -1,3 +1,8 @@
+<x-layout>
+    <x-slot name="title">
+        Phasmo Hunt: Investigation
+    </x-slot>
+
 <!-- SECTION WHITEBOARD -->
 <section id="whiteboard">
     <h2>Optional Objectives</h2>
@@ -18,7 +23,7 @@
 <section id="journal">
     <!-- VALIDE CLUES -->
     <h3>Valide clues</h3>
-    <form>
+    <form id="valide_clues">
         <label for="valide_clue_1"></label>
         <select name="v_clue_1" id="valide_clue_1">
             <option>- Select a clue</option>
@@ -43,7 +48,7 @@
     </form>
     <!-- INVALIDE CLUES -->
     <h3>Invalide clues</h3>
-    <form>
+    <form id="invalide_clues">
         <label for="invalide_clue_1"></label>
         <select name="iv_clue_1" id="invalide_clue_1">
             <option>- Select a clue</option>
@@ -74,11 +79,12 @@
             <th>Weakness</th>
         </tr>
         @foreach($ghosts as $ghost)
-        <tr>
-            <td>{{ $ghost->types }}</td>
-            <td>{{ $ghost->strength }}</td>
-            <td>{{ $ghost->weakness }}</td>
+        <tr id="{{ $ghost->id_ghost }}">
+            <td name="type">{{ $ghost->types }}</td>
+            <td name="strength">{{ $ghost->strength }}</td>
+            <td name="weakness">{{ $ghost->weakness }}</td>
         </tr>
         @endforeach
     </table>
 </section>
+</x-layout>
